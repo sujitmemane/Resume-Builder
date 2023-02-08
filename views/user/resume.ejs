@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Resume</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+      }
+      .language {
+        font-size: 10px;
+      }
+      .container {
+        width: 60%;
+        margin: 20px 50px;
+      }
+      .main-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: minmax(10px, auto);
+      }
+      .a {
+        border: 0.5px solid black;
+        text-align: left;
+
+        font-size: 8px;
+
+        font-family: "Poppins", sans-serif;
+      }
+      .intro {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        padding: 6px;
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        text-align: left;
+        font-weight: bold;
+      }
+      .email {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        height: 20px;
+        padding: 4px;
+        font-size: 8px;
+      }
+      .github {
+        grid-column: 2/3;
+        /* grid-row: 3/4; */
+        height: 20px;
+        padding: 4px;
+        font-size: 8px;
+      }
+      .portfolio {
+        grid-column: 3/4;
+        height: 20px;
+        padding: 4px;
+        font-size: 8px;
+      }
+      .twitter,
+      .blogs,
+      .linkedin {
+        padding: 4px;
+        height: 20px;
+      }
+      .linkedin {
+        grid-column: 1/2;
+        font-size: 8px;
+      }
+      .twitter {
+        grid-column: 2/3;
+        font-size: 8px;
+      }
+      .blogs {
+        grid-column: 3/4;
+        font-size: 8px;
+      }
+      .skills,
+      .education {
+        grid-column: 1/4;
+        height: 10px;
+        padding: 3px;
+        font-size: 8px;
+      }
+
+      .language {
+        grid-column: 1/2;
+        font-size: 8px;
+      }
+      .languages {
+        grid-column: 2/4;
+      }
+      .framework {
+        grid-column: 1/2;
+      }
+      .frameworks {
+        grid-column: 2/4;
+      }
+      .tool {
+        grid-column: 1/2;
+      }
+      .tools {
+        grid-column: 2/4;
+      }
+      .platform {
+        grid-column: 1/2;
+      }
+      .platforms {
+        grid-column: 2/4;
+      }
+      .database {
+        grid-column: 1/2;
+      }
+      .databases {
+        grid-column: 2/4;
+      }
+      .degree,
+      .highschool {
+        grid-column: 1/4;
+        height: 30px;
+      }
+      .experience,
+      .projects,
+      .opensource,
+      .communitywork,
+      .other {
+        grid-column: 1/4;
+        height: 50px;
+        padding: 10px;
+      }
+      .languages,
+      .tools,
+      .frameworks,
+      .databases,
+      .platforms {
+        text-align: left;
+        padding-left: 5px;
+      }
+      p {
+        padding-left: 5px;
+        font-size: 12px;
+      }
+      .education,
+      .skills {
+        font-size: 10px;
+        height: 20px;
+      }
+      .degree,
+      .highschool {
+        height: 25px;
+      }
+      .degree p,
+      .highschool p {
+        padding: 5px;
+      }
+      .other,
+      .communitywork,
+      .opensource,
+      .projects,
+      .experience {
+        height: 140px;
+      }
+      .box ul {
+        margin-left: 30px;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-grid">
+        <div class="a intro"><%= resume.name %></div>
+        <div class="a email"><%= resume.email %></div>
+        <div class="a github"><%= resume.github %></div>
+        <div class="a portfolio"><%= resume.website %></div>
+        <div class="a linkedin"><%= resume.linkedin %></div>
+        <div class="a twitter"><%= resume.twitter %></div>
+        <div class="a blogs"><%= resume.blog %></div>
+        <div class="a skills">SKILLS</div>
+        <div class="a language"><p>LANGUAGES</p></div>
+        <div class="a languages"><p><%= resume.languages %></p></div>
+        <div class="a framework"><p>FRAMEWORK</p></div>
+        <div class="a frameworks">
+          <p><%= resume.frameworks %></p>
+        </div>
+        <div class="a tool"><p>TOOLS</p></div>
+        <div class="a tools"><p><%= resume.tools %></p></div>
+        <div class="a platform"><p>PLATFORM</p></div>
+        <div class="a platforms"><p><%= resume.platforms %></p></div>
+        <div class="a database"><p>DATABASE</p></div>
+        <div class="a databases"><p><%= resume.databases %></p></div>
+        <div class="a education">EDUCATION</div>
+        <div class="a degree">
+          <p><%= resume.undergraduate %></p>
+        </div>
+        <div class="a highschool">
+          <p><%= resume.highschool %></p>
+        </div>
+        <div class="a experience">
+          <div class="box">
+            <h2>EXPERIENCE</h2>
+            <ul>
+              <li>
+                <%= resume.experience1 %>
+                <ul>
+                  <li><%= resume.experience1about %></li>
+                  <li><%= resume.experience1work %></li>
+                </ul>
+              </li>
+              <li>
+                <%= resume.experience2 %>
+                <ul>
+                  <li><%= resume.experience2about %></li>
+                  <li><%= resume.experience2work %></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="a projects">
+          <div class="box">
+            <h2>PROJECTS</h2>
+            <ul>
+              <li>
+                <%= resume.projects1 %>
+                <ul>
+                  <li><%= resume.projects1about %></li>
+                  <li><%= resume.projects1work %></li>
+                </ul>
+              </li>
+              <li>
+                <%= resume.projects2 %>
+                <ul>
+                  <li><%= resume.projects2about %></li>
+                  <li><%= resume.projects2work %></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="a other">
+          <div class="box">
+            <h2>ACHIEVEMENTS</h2>
+            <ul>
+              <li>
+                <%= resume.acheivements1 %>
+                <ul>
+                  <li><%= resume.acheivements1about %></li>
+                  <li><%= resume.acheivements1work %></li>
+                </ul>
+              </li>
+              <li>
+                <%= resume.acheivements2 %>
+                <ul>
+                  <li><%= resume.acheivements2about %></li>
+                  <li><%= resume.acheivements2work %></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

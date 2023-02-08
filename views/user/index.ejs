@@ -1,0 +1,104 @@
+
+<%- include('includes/head') %>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Noto Sans", sans-serif !important;
+      }
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .first-box {
+        align-self: center;
+        text-transform: uppercase;
+        text-align: left;
+        flex: 2;
+      }
+      .first-box-heading {
+        font-weight: bold;
+      }
+      .first-box-text {
+        font-size: 20px;
+        font-family: "Noto Sans", sans-serif !important;
+      }
+      .second-box {
+        flex: 1;
+      }
+      .second-box img {
+        padding: 10px;
+        height: 90vh;
+        width: 50vw;
+      }
+      .hhh {
+        font-weight: bold;
+        font-family: "Noto Sans", sans-serif !important;
+        font-size: x-large;
+      }
+      .resume-bank{
+        margin:30px
+      }
+      .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  align-items: stretch;
+}
+    </style>
+
+  
+  </head>
+  <body>
+    <%- include('includes/nav') %>
+    <main class="container">
+      <div class="hero">
+        <div class="first-box">
+          <h1 class="first-box-heading">Build Your Own Resume</h1>
+          <p class="first-box-text">
+            The Simplest Way to Create Your Own Resume in no Time
+          </p>
+          <a class="btn btn-dark px-4 py-2" href="/resume-form">
+            BUILD RESUME <i class="fa-solid fa-file"></i>
+          </a>
+        </div>
+        <div class="second-box">
+          <img
+            src="https://img.freepik.com/free-vector/blogging-concept-illustration_114360-1038.jpg?w=740&t=st=1675683984~exp=1675684584~hmac=45972d937bf433bb5df1d9b532c0781b5023adb1699f15f0856b43a9e2266ee2"
+            alt=""
+          />
+        </div>
+      </div> 
+      <h1 class="text-center font-bold fs-1">
+        <strong> RESUME BANK</strong>     
+      </h1>
+      <main class="container" style="margin:50px;">
+        <% if(resumeAll.length>0){ %>
+        <div class="grid">
+            <% for(let resume of resumeAll) {%>
+                
+    <div class="card" style="width: 20rem; ">
+      <img class="card-img-top" src="https://img.freepik.com/free-vector/recruit-agent-analyzing-candidates_74855-4565.jpg?w=826&t=st=1675794376~exp=1675794976~hmac=2f634b012b3fd1a8abb41bac3cd30525a3285137b8913e68bd85b0455ebff8e7" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">  RESUME :  <strong> <%= resume.name%> </strong></h5>
+      
+        
+        <a href="/resume/<%=resume.resumeId%>" class="btn btn-dark  px-5 mx-5">DOWNLOAD <i class="fa-solid fa-file-arrow-down"></i></a>
+      </div>
+    </div>
+                <% }%>
+              </div>
+              <% } else { %>
+                <h1>NO RESUME FOUND</h1>
+                <% }%>
+      </main>
+ 
+    </main>
+    <%- include('includes/end') %>
+   

@@ -1,0 +1,192 @@
+<%- include('includes/head') %>
+</head>
+<body>
+    <%- include('includes/nav') %>
+ <div class="container">
+    <h1 class="text-center p-3">INPUT YOUR SHIT <i class="fa-solid fa-poo-storm"></i> HERE </h1>
+    <form action="/resume-form" method="post">
+        <div class="form-floating">
+            <input type="text" id="name" class="form-control" placeholder="SUJIT MEMANE" name="name">
+            <label for="name">NAME</label>
+        </div>
+        <h5 class="text-left p-3">
+            SOCIALS <i class="fa-solid fa-square-share-nodes"></i>  
+        </h5>
+        <div class="row m-3">
+            <div class="col">
+                <div class="input-group">  <div class="input-group-text">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+        
+                <input type="text" class="form-control" placeholder="EMAIL" name="email"></div>
+             
+            </div>
+            <div class="col">
+                <div class="input-group">  <div class="input-group-text">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+             
+                <input type="text" class="form-control" placeholder="GITHUB" name="github"></div>
+             
+            </div>
+            <div class="col">
+                <div class="input-group">  <div class="input-group-text">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+             
+                <input type="text" class="form-control" placeholder="PORTFOLIO WEBSITE" name="website"></div>
+             
+            </div>
+          </div>
+          <div class="row m-3">
+            <div class="col">
+                <div class="input-group">  <div class="input-group-text">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+        
+                <input type="text" class="form-control" placeholder="LINKEDIN" name="linkedin"></div>
+             
+            </div>
+            <div class="col">
+                <div class="input-group">  <div class="input-group-text">
+                    <i class="fa-brands fa-square-twitter"></i>
+                </div>
+             
+                <input type="text" class="form-control" placeholder="TWITTER" name="twitter"></div>
+             
+            </div>
+            <div class="col">
+                <div class="input-group">  <div class="input-group-text">
+                    <i class="fa-brands fa-hashnode"></i>
+                </div>
+             
+                <input type="text" class="form-control" placeholder="BLOG" name="blog"></div>
+             
+            </div>
+          </div>  <h5 class="text-left p-3">
+            SKILLS <i class="fa-solid fa-gears"></i> 
+        </h5>
+        <div class="form-floating m-3">
+            <input type="text" id="languages" class="form-control" name="languages" placeholder="Languages">
+            <label for="languages">Languages</label>
+        </div>
+        <div class="form-floating m-3">
+            <input type="text" id="frameworks" class="form-control"  name="frameworks" placeholder="Fra
+            ">
+            <label for="frameworks">Frameworks</label>
+        </div>
+        <div class="form-floating m-3">
+            <input type="text" id="tools" class="form-control" name="tools" placeholder="Tools">
+            <label for="tools">Tools</label>
+        </div>
+        <div class="form-floating m-3">
+            <input type="text" id="platforms" class="form-control" name="platforms" placeholder="Platforms">
+            <label for="platforms">Platforms</label>
+        </div>
+        <div class="form-floating m-3">
+            <input type="text" id="databases" class="form-control"  name="databases" placeholder="Databases">
+            <label for="databases">Databases</label>
+        </div>
+        <h5 class="text-left p-3">
+           EDUCATION <i class="fa-solid fa-book-open-reader"></i>
+        </h5>
+        <div class="form-floating m-3">
+            <input type="text" id="undergraduate" class="form-control"  name="undergraduate" placeholder="Undergraduate">
+            <label for="undergraduate">Undergraduate</label>
+        </div>
+        <div class="form-floating m-3">
+            <input type="text" id="highschool" class="form-control"  name="highschool" placeholder="highschool">
+            <label for="highschool">High School</label>
+        </div>
+            <h5 class="text-left p-3">
+                EXPERIENCE<i class="fa-solid fa-cactus"></i>
+             </h5>
+             <div>
+                <div class="form-floating">
+                    <input type="text" id="experience1" class="form-control"  name="experience1" placeholder="experience1">
+                    <label for="experience1">Experience 1</label>
+                </div>
+                 <div class="form-floating m-3">
+                    <input type="text" id="experience1about" class="form-control"  name="experience1about" placeholder="experience1about">
+                    <label for="experience1about">About</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" id="experience1work" class="form-control"  name="experience1work" placeholder="experience1work">
+                    <label for="experience1work">Work</label>
+                </div>
+             </div>
+             <div>
+                <div class="form-floating">
+                    <input type="text" id="experience2" class="form-control"  name="experience2" placeholder="experience2">
+                    <label for="experience2">Experience 2</label>
+                </div>
+                 <div class="form-floating m-3">
+                    <input type="text" id="experience2about" class="form-control"  name="experience2about" placeholder="experience2about">
+                    <label for="experience2about">About</label>
+                </div>
+                <div class="form-floating m-3">
+                    <input type="text" id="experience2work" class="form-control"  name="experience2work" placeholder="experience2work">
+                    <label for="experience2work">Work</label>
+                </div>
+             </div>
+             <h5 class="text-left p-3"> PROJECTS</h5>
+                <div>
+                    <div class="form-floating">
+                        <input type="text" id="projects1" class="form-control"  name="projects1" placeholder="projects1">
+                        <label for="projects1">Projects 1</label>
+                    </div>
+                     <div class="form-floating m-3">
+                        <input type="text" id="projects1about" class="form-control"  name="projects1about" placeholder="projects1about">
+                        <label for="projects1about">About</label>
+                    </div>
+                    <div class="form-floating m-3">
+                        <input type="text" id="projects1work" class="form-control"  name="projects1work" placeholder="projects1work">
+                        <label for="projects1work">Work</label>
+                    </div>
+                 </div>
+                 <div>
+                    <div class="form-floating">
+                        <input type="text" id="projects2" class="form-control"  name="projects2" placeholder="projects2">
+                        <label for="projects2">Projects 2</label>
+                    </div>
+                     <div class="form-floating m-3">
+                        <input type="text" id="projects2about" class="form-control"  name="projects2about" placeholder="projects2about">
+                        <label for="projects2about">About</label>
+                    </div>
+                    <div class="form-floating m-3">
+                        <input type="text" id="projects2work" class="form-control"  name="projects2work" placeholder="projects2work">
+                        <label for="projects2work">Work</label>
+                    </div>
+                    <h5 class="text-left p-3">  Acheivements</h5>
+                    <div>
+                        <div class="form-floating">
+                            <input type="text" id=" acheivements1" class="form-control"  name="acheivements1" placeholder=" acheivements1">
+                            <label for=" acheivements1"> Acheivement 1</label>
+                        </div>
+                         <div class="form-floating m-3">
+                            <input type="text" id=" acheivements1about" class="form-control"  name="acheivements1about" placeholder=" acheivements1about">
+                            <label for=" acheivements1about">About</label>
+                        </div>
+                        <div class="form-floating m-3">
+                            <input type="text" id=" acheivements1work" class="form-control"  name="acheivements1work" placeholder=" acheivements1work">
+                            <label for=" acheivements1work">Work</label>
+                        </div>
+                     </div>
+                     <div>
+                        <div class="form-floating">
+                            <input type="text" id=" acheivements2" class="form-control"  name="acheivements2" placeholder=" acheivements2">
+                            <label for=" acheivements2"> Acheivement 2</label>
+                        </div>
+                         <div class="form-floating m-3">
+                            <input type="text" id=" acheivements2about" class="form-control"  name="acheivements2about" placeholder=" acheivements2about">
+                            <label for=" acheivements2about">About</label>
+                        </div>
+                        <div class="form-floating m-3">
+                            <input type="text" id=" acheivements2work" class="form-control"  name="acheivements2work" placeholder=" acheivements2work">
+                            <label for=" acheivements2work">Work</label>
+                        </div>
+   <button type="submit" class="btn btn-success m-4">SUBMIT</button>
+    </form>
+ </div>
+</div></div>
+<%- include('includes/end') %>
